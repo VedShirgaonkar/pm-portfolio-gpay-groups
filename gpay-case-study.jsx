@@ -6,6 +6,7 @@ import {
   BarChart2, Layers, Target, Check,
   ArrowLeft, Send, Shield, Star, MoreVertical, CreditCard, Smartphone
 } from "lucide-react";
+import { FcGoogle } from "react-icons/fc";
 
 const BLUE = "#1A73E8";
 const BLUE_LIGHT = "#E8F0FE";
@@ -37,8 +38,8 @@ const metrics = [
 
 const roadmap = [
   { phase: "Phase 1", title: "Select From History",   tag: "Now",     color: BLUE,      items: ["Multi-select transactions", "Auto-sum & smart split", "Seamless group request"] },
-  { phase: "Phase 2", title: "Shared Expense Prompt", tag: "Q3 2025", color: "#34A853", items: ["Post-payment nudge: 'Was this shared?'", "One-tap split from payment confirm", "Contextual suggestion engine"] },
-  { phase: "Phase 3", title: "Trip Mode Ledger",       tag: "2026",    color: "#9C27B0", items: ["Auto-tag & accumulate trip spend", "Live group balance dashboard", "AI-suggested split at trip end"] },
+  { phase: "Phase 2", title: "Shared Expense Prompt", tag: "Q3 2027", color: "#34A853", items: ["Post-payment nudge: 'Was this shared?'", "One-tap split from payment confirm", "Contextual suggestion engine"] },
+  { phase: "Phase 3", title: "Trip Mode Ledger",       tag: "2028",    color: "#9C27B0", items: ["Auto-tag & accumulate trip spend", "Live group balance dashboard", "AI-suggested split at trip end"] },
 ];
 
 function Tag({ children, color = BLUE }) {
@@ -145,7 +146,7 @@ function MobilePrototype() {
               <div style={{ background: "#2D2D2D", borderRadius: "16px 4px 16px 16px", padding: "12px 14px" }}>
                 <p style={{ color: "#9AA0A6", fontSize: 11, margin: "0 0 4px" }}>Split request</p>
                 <p style={{ color: "#E3E3E3", fontSize: 20, fontWeight: 700, margin: "0 0 8px" }}>₹150</p>
-                <Av letter="S" bg="#E91E63" size={20} />
+                <Av letter="V" bg="#E91E63" size={20} />
                 <div style={{ height: 3, background: "#3C4043", borderRadius: 2, margin: "8px 0 4px", position: "relative" }}>
                   <div style={{ height: "100%", width: "50%", background: BLUE, borderRadius: 2 }} />
                 </div>
@@ -155,13 +156,13 @@ function MobilePrototype() {
             <p style={{ textAlign: "center", color: "#5F6368", fontSize: 10, margin: "2px 0" }}>Yesterday, 12:20 am</p>
             <div style={{ alignSelf: "flex-start", maxWidth: "90%" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                <Av letter="S" bg="#E91E63" size={18} />
-                <p style={{ color: "#9AA0A6", fontSize: 11, margin: 0 }}>Shubham Bane</p>
+                <Av letter="P" bg="#E91E63" size={18} />
+                <p style={{ color: "#9AA0A6", fontSize: 11, margin: 0 }}>Peter Kevinson</p>
               </div>
               <div style={{ background: "#2D2D2D", borderRadius: "4px 16px 16px 16px", padding: "12px 14px" }}>
                 <p style={{ color: "#9AA0A6", fontSize: 11, margin: "0 0 2px" }}>Requested for 'tiffin plus jiixe'</p>
                 <p style={{ color: "#E3E3E3", fontSize: 20, fontWeight: 700, margin: "0 0 8px" }}>₹140</p>
-                <Av letter="S" bg="#E91E63" size={20} />
+                <Av letter="P" bg="#E91E63" size={20} />
                 <div style={{ height: 3, background: "#3C4043", borderRadius: 2, margin: "8px 0 4px" }}>
                   <div style={{ height: "100%", width: "50%", background: BLUE, borderRadius: 2 }} />
                 </div>
@@ -304,8 +305,8 @@ export default function CaseStudy() {
       <nav className="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ background: BLUE }}>
-              <Receipt size={13} color="white" />
+            <div className="w-7 h-7 rounded-full flex items-center justify-center bg-white" >
+              <FcGoogle  size={28} color="white"  />
             </div>
             <span className="text-sm font-semibold text-gray-700">GPay Groups · Case Study</span>
           </div>
@@ -314,7 +315,7 @@ export default function CaseStudy() {
               <a key={s} href={`#${s.toLowerCase()}`} className="hover:text-blue-600 transition-colors">{s}</a>
             ))}
           </div>
-          <Tag>PM Portfolio · 2024</Tag>
+          <Tag>PM Portfolio · 2026</Tag>
         </div>
       </nav>
 
@@ -412,7 +413,12 @@ export default function CaseStudy() {
         <div className="max-w-5xl mx-auto px-6">
           <SectionLabel>The Solution</SectionLabel>
           <h2 className="text-3xl font-bold mb-2">Select From History</h2>
-          <p className="text-gray-500 mb-12 max-w-xl">A single entry point inside GPay Groups that pulls in transaction history, lets the organiser multi-select, and auto-calculates the split — without leaving the app.</p>
+          <p className="text-gray-500 mb-2 max-w-xl">A single entry point inside GPay Groups that pulls in transaction history, lets the organiser multi-select, and auto-calculates the split — without leaving the app. </p>
+          
+          <p className="text-gray-500 mb-12 max-w-xl font-bold">Only Interactive steps on the screen shown in solution section <br/>
+1. Click on the split expense <br/>
+2. Click select on the transactions<br/> 
+3. Review split </p>
           <MobilePrototype />
         </div>
       </section>
@@ -484,15 +490,44 @@ export default function CaseStudy() {
         </div>
       </section>
 
-      <footer className="border-t border-gray-100 py-8">
+      {/* <footer className="border-t border-gray-100 py-8">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ background: BLUE }}><Receipt size={11} color="white" /></div>
-            <span>Google Pay Groups · Select From History · PM Case Study</span>
+            <div className="w-6 h-6 rounded-full flex items-center justify-center bg-white" ><FcGoogle  size={28} color="white" /></div>
+            <span>Google Pay Groups · Select From History · PM Case Study by Ved Shirgaonkar</span>
           </div>
           <p>A speculative product design exercise. Not affiliated with Google.</p>
         </div>
-      </footer>
+      </footer> */}
+      <footer className="border-t border-gray-100 py-8">
+  <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+
+    <div className="flex items-center gap-3">
+      <div className="w-6 h-6 rounded-full flex items-center justify-center bg-white">
+        <FcGoogle size={18} />
+      </div>
+
+      <div>
+        <p className="font-medium text-gray-700">
+          Google Pay Groups · Product Case Study
+        </p>
+        <p className="text-gray-400">
+          Designed & documented by Ved Shirgaonkar
+        </p>
+      </div>
+    </div>
+
+    <div className="text-center md:text-right">
+      <p className="text-gray-500">
+        © 2026 Ved Shirgaonkar. All rights reserved.
+      </p>
+      <p className="text-gray-400">
+        Independent product design exercise. Not affiliated with Google.
+      </p>
+    </div>
+
+  </div>
+</footer>
     </div>
   );
 }
