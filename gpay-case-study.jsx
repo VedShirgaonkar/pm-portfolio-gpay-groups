@@ -322,6 +322,7 @@ export default function CaseStudy() {
       <section className="max-w-5xl mx-auto px-6 pt-20 pb-16">
         <div className="flex flex-wrap gap-2 mb-6">
           <Tag>UX Research</Tag><Tag color="#34A853">Product Design</Tag><Tag color="#9C27B0">Google Pay</Tag>
+          <Tag color="#673AB7"> <a href="https://slash-capricorn-913.notion.site/389797e14445801babace13a5ced39dc">Product Strategy</a></Tag>
         </div>
         <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900 mb-5" style={{ letterSpacing: "-0.5px" }}>
           Reimagining Group Expense<br />
@@ -531,3 +532,4 @@ export default function CaseStudy() {
     </div>
   );
 }
+//https://slash-capricorn-913.notion.site/Google-Pay-Groups-Product-Strategy-389797e14445801babace13a5ced39dc?source=copy_link
