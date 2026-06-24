@@ -331,7 +331,7 @@ export default function CaseStudy() {
         <p className="text-lg text-gray-500 max-w-2xl mb-10 leading-relaxed">
           Eliminating manual calculations and context-switching for seamless shared expenses — one feature that saves the trip organiser from a mental spreadsheet.
         </p>
-        <div className="grid md:grid-cols-3 gap-4">
+        {/* <div className="grid md:grid-cols-3 gap-4">
           {[
             { icon: AlertCircle, color: "#EA4335", label: "The Problem",  text: "Users manually aggregate shared expenses after trips — switching between calculator, history, and split screens." },
             { icon: Zap,         color: BLUE,      label: "The Solution", text: "\"Select From History\" lets users pick transactions directly and create a split request in seconds." },
@@ -343,7 +343,55 @@ export default function CaseStudy() {
               <p className="text-[13px] text-gray-500 leading-relaxed">{text}</p>
             </div>
           ))}
-        </div>
+        </div> */}
+        <div className="grid md:grid-cols-3 gap-4">
+  {[
+    {
+      icon: AlertCircle,
+      color: "#EA4335",
+      label: "The Problem",
+      text: "Users manually aggregate shared expenses after trips — switching between calculator, history, and split screens.",
+      section: "problem",
+    },
+    {
+      icon: Zap,
+      color: BLUE,
+      label: "The Solution",
+      text: "\"Select From History\" lets users pick transactions directly and create a split request in seconds.",
+      section: "solution",
+    },
+    {
+      icon: Target,
+      color: "#34A853",
+      label: "The Impact",
+      text: "Reduces time-to-split from ~4 minutes to under 30 seconds, eliminating calculation errors entirely.",
+      section: "metrics",
+    },
+  ].map(({ icon: Icon, color, label, text, section }) => (
+    <div
+      key={label}
+      onClick={() =>
+        document.getElementById(section)?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+      className="rounded-2xl border p-5 cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+      style={{ borderColor: "#E8EAED" }}
+    >
+      <div
+        className="w-9 h-9 rounded-xl flex items-center justify-center mb-3"
+        style={{ background: color + "18" }}
+      >
+        <Icon size={18} color={color} />
+      </div>
+
+      <p className="font-bold text-sm text-gray-900 mb-1">{label}</p>
+
+      <p className="text-[13px] text-gray-500 leading-relaxed">{text}</p>
+    </div>
+  ))}
+</div>
       </section>
 
       <div className="border-t border-gray-100" />
